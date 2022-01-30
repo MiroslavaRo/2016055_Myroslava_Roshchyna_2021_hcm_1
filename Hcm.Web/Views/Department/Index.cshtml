@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Hcm.Web.Models.DepratmentViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card">
+    <div class="card-body">
+        <div class="card-title">
+            <a asp-action="Create"
+               class="btn btn-primary btn-sm float-right" style="width:30px;height:30px">+</a>
+            <div class="text-center">
+                <h3>Departments</h3>
+            </div>
+        </div>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Country)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.City)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Country)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.City)
+                        </td>
+                        <td>
+                                <a asp-action="Delete" asp-route-id="@item.DepartmentId" class="btn btn-danger btn-sm float-right hcm-btn">Delete</a>
+                                <a asp-action="Edit" asp-route-id="@item.DepartmentId" class="btn btn-info btn-sm float-right mr-2 hcm-btn">Edit</a>
+                            
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

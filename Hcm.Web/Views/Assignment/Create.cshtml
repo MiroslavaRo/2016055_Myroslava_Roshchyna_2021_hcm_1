@@ -1,0 +1,72 @@
+﻿@model Hcm.Web.Models.AssignmentViewModel
+
+@{
+    ViewData["Title"] = "View";
+}
+<div class="card">
+    <div class="card-body col-md-12">
+        <div class="card-title">
+            <h3>Assignment: @Html.DisplayFor(e => e.Name)</h3>
+        </div>
+        <form asp-action="Create" asp-route-employeeId="@Context.Request.Query["employeeId"]">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label asp-for="JobTitle" class="control-label"></label>
+                    <input asp-for="JobTitle" class="form-control" />
+                    <span asp-validation-for="JobTitle" class="text-danger"></span>
+                </div>
+                <div class="form-group  col-md-6">
+                    <label asp-for="DepartmentId" class="control-label"></label>
+                    <select asp-for="DepartmentId" class="form-control">
+                        @foreach (var dep in Model.Departments)
+                        {
+                            <option value="@dep.Id">@dep.Name</option>
+                        }
+                    </select>
+                    <span asp-validation-for="DepartmentId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Start" class="control-label"></label>
+                    <input asp-for="Start" class="form-control" />
+                    <span asp-validation-for="Start" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="End" class="control-label"></label>
+                    <input asp-for="End" class="form-control" />
+                    <span asp-validation-for="End" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Amount" class="control-label"></label>
+                    <input asp-for="Amount" class="form-control" />
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Currency" class="control-label"></label>
+                    <select asp-for="Currency" class="form-control">
+                        <option value="EUR" selected>EUR</option>
+                        <option value="BGN">BGN</option>
+                        <option value="USD">USD</option>
+                        <option value="GBP">GBP</option>
+                    </select>
+                    <span asp-validation-for="Currency" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12 ">
+                    <input type="submit" value="Create" class="btn btn-primary btn-sm float-right hcm-btn" />
+                    <a asp-action="Edit" asp-controller="Employee" asp-route-id="@Context.Request.Query["employeeId"]" 
+                       class="btn btn-primary float-right btn-sm mr-3 hcm-btn">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

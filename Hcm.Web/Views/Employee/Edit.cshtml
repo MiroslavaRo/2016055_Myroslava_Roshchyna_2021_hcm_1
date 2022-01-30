@@ -1,0 +1,88 @@
+﻿@model Hcm.Web.Models.EmployeeViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="card shadow mb-5">
+    <div class="card-body">
+        <div class="card-title">
+            <h3>@Html.ValueFor(e => e.FirstName) @Html.ValueFor(e => e.LastName)</h3>
+        </div>
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label asp-for="FirstName" class="control-label"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="LastName" class="control-label"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Phone" class="control-label"></label>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label asp-for="Country" class="control-label"></label>
+                    <input asp-for="Country" class="form-control" />
+                    <span asp-validation-for="Country" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="City" class="control-label"></label>
+                    <input asp-for="City" class="form-control" />
+                    <span asp-validation-for="City" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="PostCode" class="control-label"></label>
+                    <input asp-for="PostCode" class="form-control" />
+                    <span asp-validation-for="PostCode" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12">
+                    <label asp-for="AddressLine" class="control-label"></label>
+                    <input asp-for="AddressLine" class="form-control" />
+                    <span asp-validation-for="AddressLine" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12 ">
+                    <input type="submit" value="Save" class="btn btn-primary btn-sm float-right hcm-btn" />
+                    @if (User.Identity.IsAuthenticated
+              && User.IsInRole("Administrator"))
+                    {
+                        <a asp-action="Index" class="btn btn-primary float-right btn-sm mr-3 hcm-btn">Cancel</a>
+
+                    }
+                    @if (User.Identity.IsAuthenticated
+           && User.IsInRole("Employee"))
+                    {
+                        <a asp-action="Details" asp-route-id="@Html.ValueFor(e => e.EmployeeId)" class="btn btn-primary float-right btn-sm mr-3 hcm-btn">Cancel</a>
+
+                    }
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@(await Html.PartialAsync("_AssignmentListPartialView", Model.Assignments))
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

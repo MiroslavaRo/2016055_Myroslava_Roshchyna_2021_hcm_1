@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Hcm.Web.Models.AssignmentViewModel>
+
+
+<div class="card shadow">
+    <div class="card-body">
+        <div class="card-title">
+            <a asp-action="Create"
+               asp-controller="Assignment"
+               asp-route-employeeId="@ViewContext.RouteData.Values["id"]"
+               class="btn btn-primary btn-sm float-right" style="width:30px;height:30px">+</a>
+            <div class="text-center">
+                <h3>Assignments</h3>
+            </div>
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Name)</th>
+                    <th>@Html.DisplayNameFor(model => model.JobTitle)</th>
+                    <th>@Html.DisplayNameFor(model => model.Start)</th>
+                    <th>@Html.DisplayNameFor(model => model.End)</th>
+                    <th>@Html.DisplayNameFor(model => model.Amount)</th>
+                    <th>@Html.DisplayNameFor(model => model.Currency)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            @if (User.Identity.IsAuthenticated
+          && User.IsInRole("Administrator"))
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(e => item.Name)</td>
+                        <td>@Html.DisplayFor(e => item.JobTitle)</td>
+                        <td>@Html.DisplayFor(e => item.Start)</td>
+                        <td>@Html.DisplayFor(e => item.End)</td>
+                        <td>@Html.DisplayFor(e => item.Amount)</td>
+                        <td>@Html.DisplayFor(e => item.Currency)</td>
+                        <td>
+                            <!--  <a asp-controller="Assignment" asp-action="Delete" class="btn btn-danger btn-sm float-right hcm-btn">Delete</a>-->
+                            <a asp-controller="Assignment"
+                               asp-action="Edit"
+                               asp-route-id="@item.AssignmentId"
+                               asp-route-employeeId="@ViewContext.RouteData.Values["id"]"
+                               class="btn btn-info btn-sm float-right mr-2 hcm-btn">Edit</a>
+                        </td>
+                    </tr>
+                }
+            }
+            @if (User.Identity.IsAuthenticated
+          && User.IsInRole("Employee"))
+            {
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(e => item.Name)</td>
+                        <td>@Html.DisplayFor(e => item.JobTitle)</td>
+                        <td>@Html.DisplayFor(e => item.Start)</td>
+                        <td>@Html.DisplayFor(e => item.End)</td>
+                        <td>@Html.DisplayFor(e => item.Amount)</td>
+                        <td>@Html.DisplayFor(e => item.Currency)</td>
+                        <td>
+                            <a asp-controller="Assignment"
+                               asp-action="Edit"
+                               asp-route-id="@item.AssignmentId"
+                               asp-route-employeeId="@ViewContext.RouteData.Values["id"]"
+                               class="btn btn-info btn-sm float-right mr-2 hcm-btn">View</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
