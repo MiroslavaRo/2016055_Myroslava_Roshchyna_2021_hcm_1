@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - Hcm.Web</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/hcm/css/style.css" />
 </head>
 <body>
     <header>
@@ -19,12 +20,12 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1 float-left">
                         @if (User.Identity.IsAuthenticated
-                         && User.IsInRole("Administrator"))
+                       && User.IsInRole("Administrator"))
                         {
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Employees</a>
+                            <li class="main-btns nav-item" >
+                                <a class="nav-link text-dark active" asp-area="" asp-controller="Home" asp-action="Index">Employees</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="main-btns nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Department" asp-action="Index">Departments</a>
                             </li>
 
@@ -32,9 +33,9 @@
                         }
 
                         @if (User.Identity.IsAuthenticated
-                         && User.IsInRole("Employee"))
+                       && User.IsInRole("Employee"))
                         {
-                            <li class="nav-item">
+                            <li class="main-btns nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">My Page</a>
                             </li>
                         }
@@ -59,7 +60,7 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted" style="background-color:rgba(255, 255, 255, 90%)">
         <div class="container">
             &copy; 2021 - Hcm.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
@@ -67,6 +68,8 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/hcm/js/js.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+

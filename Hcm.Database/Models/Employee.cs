@@ -5,6 +5,7 @@ namespace Hcm.Database.Models
 {
     public class Employee : DatabaseModel
     {
+        public string Avatar { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Phone { get; set; }

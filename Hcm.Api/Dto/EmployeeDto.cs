@@ -9,6 +9,7 @@ namespace Hcm.Api.Dto
     public class EmployeeDto
     {
         public string Id { get; set; }
+        public string Avatar { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Phone { get; set; }
@@ -21,6 +22,7 @@ namespace Hcm.Api.Dto
 
     public class EmployeeCreateDto
     {
+        public string Avatar { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         [Required]
@@ -35,6 +37,7 @@ namespace Hcm.Api.Dto
 
     public class EmployeeUpdateDto
     {
+        public string Avatar { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         [Required]

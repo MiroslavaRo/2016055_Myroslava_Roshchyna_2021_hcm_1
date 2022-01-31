@@ -1,5 +1,5 @@
 ﻿@model Hcm.Web.Models.LoginViewModel
-
+<!--
 <div class="d-flex align-items-center justify-content-center" style="margin-top:10%">
     <div class="card col-md-4 shadow-lg" style="padding-top:25px">
         <form asp-controller="Home" asp-action="Login" class="card-body">
@@ -30,3 +30,61 @@
         </form>
     </div>
 </div>
+
+-->
+<section class="vh-100" style="background-color: /*#9A616D;*/ ">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col col-xl-10">
+                <div class="card" style="border-radius: 1rem;">
+                    <div class="row g-0">
+                        <div class="col-md-6 col-lg-5 d-none d-md-block">
+                            <img src="~/hcm/img/login.webp"
+                                 alt="login form"
+                                 class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                        </div>
+                        <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                            <div class="card-body p-4 p-lg-5 text-black">
+
+                                <form asp-controller="Home" asp-action="Login" class="card-body">
+
+                                    <div class="d-flex align-items-center mb-3 pb-1">
+                                        <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                                        <span class="h1 fw-bold mb-0">HCM Web</span>
+                                    </div>
+
+                                    <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
+
+                                    <div class="form-outline mb-4">
+                                        <input asp-for="Username" type="text" placeholder="@Html.DisplayNameFor(e => e.Username)" class="form-control form-control-lg" />
+                                        <label asp-validation-for="Username" class="form-label">Username</label>
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <input asp-for="Password" type="password" placeholder="@Html.DisplayNameFor(e => e.Password)" class="form-control form-control-lg" />
+                                        <label asp-validation-for="Password" class="form-label">Password</label>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <select asp-for="Role" class="form-control form-control-lg">
+                                            <option value="0">Please select</option>
+                                            <option value="1">Administrator</option>
+                                            <option value="2">Employee</option>
+                                        </select>
+                                        <span asp-validation-for="Role" class="form-label"></span>
+                                    </div>
+
+                                    <div class="pt-1 mb-4">
+                                        <button type="submit" class="btn btn-dark btn-lg btn-block">Login</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

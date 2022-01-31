@@ -1,0 +1,26 @@
+﻿body {
+    background-image: url("../img/background.jpg");
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+}
+/*
+.main-btns {
+    border-bottom: 1px solid #ddd;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+    .main-btns > a.active {
+        cursor: default;
+        background-color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+        border-bottom-color: transparent;
+    }
+    */

@@ -82,6 +82,7 @@ namespace Hcm.Database
             });
 
 
+
             base.OnModelCreating(modelBuilder);
         }
     }

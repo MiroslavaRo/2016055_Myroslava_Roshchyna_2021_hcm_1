@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Hcm.Web.Models
@@ -7,6 +8,12 @@ namespace Hcm.Web.Models
     {
         [Display(Name = "Id")]
         public string EmployeeId { get; set; }
+
+        [Display(Name = "Avatar")]
+        public string Avatar { get; set; }
+        [Display(Name = "Avatar File")]
+        public IFormFile AvatarFile { get; set; }
+
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
         [Display(Name = "Family Name")]

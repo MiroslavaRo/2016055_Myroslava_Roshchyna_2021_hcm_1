@@ -4,10 +4,14 @@
 <div class="card shadow">
     <div class="card-body">
         <div class="card-title">
-            <a asp-action="Create"
-               asp-controller="Assignment"
-               asp-route-employeeId="@ViewContext.RouteData.Values["id"]"
-               class="btn btn-primary btn-sm float-right" style="width:30px;height:30px">+</a>
+            @if (User.Identity.IsAuthenticated
+       && User.IsInRole("Administrator"))
+            {
+                <a asp-action="Create"
+                   asp-controller="Assignment"
+                   asp-route-employeeId="@ViewContext.RouteData.Values["id"]"
+                   class="btn btn-primary btn-sm float-right" style="width:30px;height:30px">+</a>
+                   }
             <div class="text-center">
                 <h3>Assignments</h3>
             </div>

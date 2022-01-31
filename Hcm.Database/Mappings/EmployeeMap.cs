@@ -33,6 +33,9 @@ namespace Hcm.Database.Mappings
                 .HasColumnName("user_id")
                 .IsRequired();
 
+            builder.Property(e => e.Avatar)
+                .HasColumnName("avatar");
+
             builder.Property(e => e.FirstName)
                 .HasMaxLength(64)
                 .HasColumnName("first_name")

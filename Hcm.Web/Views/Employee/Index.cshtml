@@ -8,7 +8,7 @@
     <div class="card-body">
         <div class="card-title">
             <a asp-action="Create"
-               class="btn btn-primary btn-sm float-right" style="width:30px;height:30px">+</a>
+               class="btn btn-primary btn-sm float-right" style="padding:6px 20px">Create</a>
             <div class="text-center">
                 <h3>Employees</h3>
             </div>
@@ -16,10 +16,10 @@
 
         <table class="table table-hover">
             <thead>
-                <tr><!--
+                <tr>
                     <th>
-                        @Html.DisplayNameFor(model => model.EmployeeId)
-                    </th>-->
+                        @Html.DisplayNameFor(model => model.Avatar)
+                    </th>
                     <th>
                         Names
                     </th>
@@ -35,11 +35,19 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr><!-- 
+                    <tr>
                         <td>
-                            @Html.DisplayFor(modelItem => item.EmployeeId)
-                        </td>
-                    -->
+                            @if (item.Avatar != null)
+                            {
+                                <img src="~/hcm/img/@item.EmployeeId.ToString()/@item.Avatar" style=" width: 40px; border-radius: 25%;">
+                            }
+                            else
+                            {
+                                <img src="~/hcm/img/noavatar.png" style="width: 40px; border-radius: 25%;">
+                            }
+                        </td>  
+              
+
                         <td>
                             @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)
                         </td>

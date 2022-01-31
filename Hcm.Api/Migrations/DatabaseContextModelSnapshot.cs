@@ -100,6 +100,10 @@ namespace Hcm.Api.Migrations
                         .HasColumnType("TEXT")
                         .HasMaxLength(512);
 
+                    b.Property<string>("Avatar")
+                        .HasColumnName("avatar")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("City")
                         .IsRequired()
                         .HasColumnName("city")
@@ -235,7 +239,7 @@ namespace Hcm.Api.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "7d54fc78-90a0-4a54-8117-472103a7eb2c",
+                            Id = "9f66a868-85f5-49b7-b869-a3d8952ae78e",
                             Email = "administrator@hcm.com",
                             Password = "6b45f1416832256171cbfe03140a4cab",
                             Phone = "+359878121212121",
