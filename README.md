@@ -2,7 +2,7 @@
 
 ## HCM Web
    Hcm Web it is a web application for managing human resources. It has a lot of benefits both: for managers and for workers. Hcm Web is easy to use and helpful tool for monitoring Employees, their assignments even if they are in different Departments.
-Application contains 2 types of accounts with different functionalities: [Administrator](section) and [Employee](section).
+Application contains 2 types of accounts with different functionalities: [Administrator](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/tree/master#functionality-admin) and [Employee](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/tree/master#functionality-user).
 
 ## Functionality Admin
 ### Login Form
@@ -13,9 +13,9 @@ To Login you need to type username, password and your role (administrator/employ
 
 
 Administrator account have access to 3 sections:
--	[Employees](section)
--	[Departments](section)
--	[Assignments](section)
+-	[Employees]([section](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/tree/master#-employees-section)
+-	[Departments]([section](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/tree/master#-departments-section))
+-	[Assignments]([section](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/tree/master#-assignments-section))
 
 
 ### 👥 Employees section
@@ -42,7 +42,7 @@ In Employees Section you can find the list of Employees. You can make simple CRU
 </table>
 
 ### 🏘 Departments section
-In this section you can moderate Departments of your company. Further you can assign an employee to certain department in [Assignments](Assignments) sections.
+In this section you can moderate Departments of your company. Further you can assign an employee to certain department in [Assignments]([section](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/tree/master#-departments-section)) sections.
 
 <img src="https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/7cd96daf-8d51-46c4-839a-1f106ed50e29" width="500">
 
