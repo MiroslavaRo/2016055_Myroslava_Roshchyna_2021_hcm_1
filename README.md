@@ -1,48 +1,67 @@
 # 2016055_Myroslava_Roshchyna_2021_hcm_01
-(Usernames and Passwords are in the document and in database context)
 
 ## HCM Web
    Hcm Web it is a web application for managing human resources. It has a lot of benefits both: for managers and for workers. Hcm Web is easy to use and helpful tool for monitoring Employees, their assignments even if they are in different Departments.
-Application contains 2 types of accounts with different functionalities: Administrator and Employee.
+Application contains 2 types of accounts with different functionalities: [Administrator](section) and [Employee](section).
 
-## Functionalities
+## Functionality Admin
 ### Login Form
 
 To Login you need to type username, password and your role (administrator/employee).
-![image](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/39b6af49-24ac-47a4-9dbe-fb63a05ad213)
 
-Administrator account has 3 main tabs:
--	Employees
--	Departments
--	Logout
+<img src="https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/bcac89a5-b314-4089-8db0-d8219c81fde0" width="700">
 
 
-### > Employee
-In Employees Section you can find the list of Employees. There are some options:
-1.	Create (will redirect you to Create Employee Page)
-2.	Edit (will redirect you to Edit Current Employee Page)
-3.	Delete (will redirect you to Delete Current Employee Page)
-
-![image](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/854fec52-ce8a-4e2a-be2b-b9eeb5327737)
-
-#### _Create Employee_
-![image](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/a2a90bc1-f4ab-4657-8349-52f0d5e58328)
-
-#### _Edit Employee_
-![image](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/9153d72c-a806-42d8-a8aa-6316d1e3370c)
-![image](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/277ef073-095e-488e-8650-046b6a83b143)
-
-#### _Delete Employee_
-![image](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/a1c19e63-b24c-4907-940e-43ec80a53bff)
+Administrator account have access to 3 sections:
+-	[Employees](section)
+-	[Departments](section)
+-	[Assignments](section)
 
 
-### > Departments
-![image](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/c9c367cc-e848-4dc4-8879-d1682dee56cf)
+### 👥 Employees section
+In Employees Section you can find the list of Employees. You can make simple CRUD actions.
 
-### > Assignments
-![image](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/00cd313d-ffed-46c4-905e-f47aa5f1e7c2)
+<img src="https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/89eaf087-626e-4f9f-8c5e-c048bcf5834e" width="700">
+
+<table>
+  <tr>
+    <th>Create Employee</th>
+    <th>Delete Employee</th>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/17520085-1688-4e64-9a07-2cde59ba86c3" width="500"></td>
+    <td><img src="https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/5e12f5ed-c3b0-4f28-a331-192467541638" width="500"></td>
+  </tr>   
+  <tr>
+    <th colspan="2">Edit Employee</th>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/cb033a37-f0c3-4010-84ab-05d01cac7387" width="500"></td>
+    <td><img src="https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/05f49a68-bc79-4f00-817a-77b3a91216c4" width="500"></td>
+  </tr>
+</table>
+
+### 🏘 Departments section
+In this section you can moderate Departments of your company. Further you can assign an employee to certain department in [Assignments](Assignments) sections.
+
+<img src="https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/7cd96daf-8d51-46c4-839a-1f106ed50e29" width="500">
 
 
+### ✅ Assignments section
+To assign a task to a worker, you must enter the necessary data in the following fields:
+- Position
+- Department (choose that one you created)
+- Start/End dates
+- Salary 
+- Currency 
 
+<img src="https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/61579584-182d-4c85-ac1c-837e79ad7990" width="500">
+
+
+## Functionality User
+As a User you can review and change your personal information.
+
+<img src="https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/36a36426-ddb9-45a1-acd1-bf5cea28da36" width="700">
+<img src="https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/c3d9a500-b5e3-420f-a60e-89dbe542fcd8" width="700">
 
 
