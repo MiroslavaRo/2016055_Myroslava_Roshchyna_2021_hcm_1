@@ -2,7 +2,7 @@
 
 ## HCM Web
    Hcm Web it is a web application for managing human resources. It has a lot of benefits both: for managers and for workers. Hcm Web is easy to use and helpful tool for monitoring Employees, their assignments even if they are in different Departments.
-Application contains 2 types of accounts with different functionalities: [Administrator](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/tree/master#functionality-admin) and [Employee](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/tree/master#functionality-user).
+Application contains 2 types of accounts with different functionalities: [Administrator](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/tree/master#functionality-admin) and [Employee](https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/tree/master#functionality-employee).
 
 ## Functionality Admin
 ### Login Form
@@ -58,7 +58,7 @@ To assign a task to a worker, you must enter the necessary data in the following
 <img src="https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/61579584-182d-4c85-ac1c-837e79ad7990" width="500">
 
 
-## Functionality User
+## Functionality Employee
 As a User you can review and change your personal information.
 
 <img src="https://github.com/MiroslavaRo/2016055_Myroslava_Roshchyna_2021_hcm_1/assets/72034705/36a36426-ddb9-45a1-acd1-bf5cea28da36" width="700">
